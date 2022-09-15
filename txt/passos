@@ -56,6 +56,8 @@
     no app.js adicionar...
     app.set('view engine','ejs')
 
+
+
 ☐ Configurar a pasta de views
     app.set('views', './src/views');
 
@@ -83,3 +85,5 @@
 
 ☐ Realizar o commit
     git commit -m "Primeiro commit"
+
+    //parei aqui ---------------------------------------------------------

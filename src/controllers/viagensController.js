@@ -1,12 +1,18 @@
 const viagensController = {
 
     index: (req, res) => {
-        res.send('inicio controllers')    
+        res.render('index.ejs')    
     },
 
+
     busca: (req, res) => {
-        res.send('incio da busca')
+        res.render('busca.ejs')
     },
+
+    viagens: (req,res) => {
+        res.render('viagens.ejs')
+    },
+
 
 
 
