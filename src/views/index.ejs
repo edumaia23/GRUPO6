@@ -1,1 +1,236 @@
-raiz do projeto
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <div><img width="3%" src="/img/logo.png" alt="Logo da empresa">
+
+    <a href="">
+      <h1>Pé Na Estrada</h1>
+    </a>
+  </div>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", Arial, Helvetica, sans-serif
+    }
+
+    .myLink {
+      display: none
+    }
+  </style>
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- Navigation Bar -->
+  <h2>Aqui começa sua Jornada</h2>
+  <div class="w3-bar w3-deep-orange">
+    <button class="w3-bar-item w3-button tablink w3-red" onclick="openLink(event, &#39;Passagens aéreas&#39;);"><i
+        class="fa fa-plane w3-margin-right"></i>Passagens aéreas</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, &#39;Hotel/Acomodações&#39;);"><i
+        class="fa fa-bed w3-margin-right"></i>Hotel/Acomodações</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, &#39;Aluguel de Carro&#39;);"><i
+        class="fa fa-car w3-margin-right"></i>Aluguel de Carro</button>
+  </div>
+
+
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+    <img class="w3-image" src="img/por do sol.png" alt="por do sol" width="1500" height="700">
+    <div class="w3-display-middle" style="width:65%">
+      <div class="w3-bar w3-deep-orange">
+        <button class="w3-bar-item w3-button tablink w3-red" onclick="openLink(event, &#39;Flight&#39;)">
+          <form action="/registro" method="POST">
+            <label for="nome">Origem:</label>
+            <input type="text" name="nome" id="origem">
+            <i class="fa fa-plane w3-margin-right">
+        </button>
+
+        <form action="/registro" method="POST">
+          <label for="nome">Destino:</label>
+          <input type="text" name="nome" id='destino'>
+          <button class="w3-bar-item w3-button tablink" onclick="openLink(event, &#39;Hotel&#39;);"><i
+              
+
+
+      <!-- Tabs -->
+      <div id="Flight" class="w3-container w3-white w3-padding-16 myLink" style="display: block;">
+        <h3>Aqui começa a sua Jornada</h3>
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half">
+            <label>From</label>
+            <input class="w3-input w3-border" type="text" placeholder="Departing from">
+          </div>
+          <div class="w3-half">
+            <label>To</label>
+            <input class="w3-input w3-border" type="text" placeholder="Arriving at">
+          </div>
+        </div>
+        <p><button class="w3-button w3-dark-grey">Search and find dates</button></p>
+      </div>
+
+      <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink" style="display: none;">
+        <h3>Find the best hotels</h3>
+        <p>Book a hotel with us and get the best fares and promotions.</p>
+        <p>We know hotels - we know comfort.</p>
+        <p><button class="w3-button w3-dark-grey">Search Hotels</button></p>
+      </div>
+
+      <div id="Car" class="w3-container w3-white w3-padding-16 myLink" style="display: none;">
+        <h3>Best car rental in the world!</h3>
+        <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in the
+          world with CarServiceRentalRUs</p>
+        <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
+        <p><button class="w3-button w3-dark-grey">Search Availability</button></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:1100px;">
+
+    <!-- Ofertas -->
+    <div>
+      <h2><strong>Melhores voos para o seu Destino</strong></h2>
+      <h4>Melhores tarifas para esse mês>>>>>>></h4>
+      <h5><strong>50%</strong> desconto</h5>
+    </div>
+    <div>
+      <div class="w3-half w3-middle">
+        <img width="30%" src="img/buenos.png" alt="Buenos" style="width:100%">
+        <div class="w3-container w3-deep-orange">
+          <h3>Buenos Aires</h3>
+          <p>Viagem apartir de R$700</p>
+          <p>Gol quint. 13/09 de set.
+            Gol seg. 19/09 de set.
+          </p>
+          <button class="w3-button w3-margin-bottom">Compre já>>>></button>
+        </div>
+        <div class="w3-margin-bottom"></div>
+        <img width="30%" src="img/lisboa.png" alt="Lisboa" style="width:100%">
+        <div class="w3-container w3-deep-orange">
+          <h3>Lisboa</h3>
+          <p>Viagem apartir de R$1300</p>
+          <p>Gol quint. 10/09 de set.
+            Gol seg. 23/09 de set.
+          </p>
+          <button class="w3-button w3-margin-bottom">Compre já</button>
+        </div>
+        <div>
+          <div class="w3-margin-top">
+            <img width="30%" src="img/santiago.png" alt="Santiago" style="width:100%">
+            <div class="w3-container w3-deep-orange">
+              <h3>Santiago</h3>
+              <p>Viagem apartir de R$1700</p>
+              <p>Gol quint. 03/09 de set.
+                Gol seg. 12/09 de set.
+              </p>
+              <button class="w3-button w3-margin-top">Compre já</button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="w3-container w3-opacity w3-center-bottom">
+        <aside align="sidebyside">
+          <img width="3%" src="/img/logo.png" alt="Logo da empresa">
+          <div>
+            <h5><strong>Explorar</strong></h5>
+            <ul type='disc'>
+              <li><a href="">Cidades</a></li>
+              <li><a href="">Aeroportos</a></li>
+              <li><a href="">Países</a></li>
+              <li><a href="">Linhas aéreas</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5><strong>Parceiros</strong></h5>
+            <ul type='disc'>
+              <li>Trabalhe conosco</li>
+              <li>Anuncie conosco</li>
+              <li>Informações de viagens</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5><strong>Empresas</strong></h5>
+            <ul type='disc'>
+              <li>Sobre nós</li>
+              <li>Nossa equipe</li>
+              <li>Acessibilidade</li>
+              <li>Sustentabilidade</li>
+            </ul>
+          </div>
+
+          <div>
+            <h5><strong>Ajuda</strong></h5>
+            <ul type='disc'>
+              <li>Ajuda</li>
+              <li>Configurações de privacidade</li>
+            </ul>
+          </div>
+
+        </aside>
+
+        <h5>Nossas Rede</h5>
+
+        <a href="">
+          <img src="../public/img/facebook.svg" alt="facebook">
+        </a>
+        <a href="">
+          <img src="../public/img/instagram.svg" alt="instagram">
+        </a>
+        <a href="">
+          <img src="../public/img/linkedin.svg" alt="linkedin">
+        </a>
+        <a href="">
+          <img src="../public/img/youtube.svg" alt="youtube">
+
+        </a>
+
+
+      </footer>
+
+      <script>
+        // Tabs
+        function openLink(evt, linkName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("myLink");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+          }
+          document.getElementById(linkName).style.display = "block";
+          evt.currentTarget.className += " w3-red";
+        }
+
+        // Click on the first tablink on load
+        document.getElementsByClassName("tablink")[0].click();
+      </script>
+
+
+
+</body>
+
+</html>

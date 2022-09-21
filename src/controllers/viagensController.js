@@ -1,4 +1,6 @@
-const viagensController = {
+// o controller receberá a solicitação do roteador e encaminhará a requisição para a função determinada, rederizando a view correspondente
+
+const viagensController = {  // primeiro passo é criar a variavel e depois criar a função de acordo com cada página do site
 
     index: (req, res) => {
         res.render('index.ejs')    
@@ -18,4 +20,4 @@ const viagensController = {
 
 }
 
-module.exports = viagensController;
+module.exports = viagensController; // exporta o arquivo viagens controle

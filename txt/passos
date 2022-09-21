@@ -86,4 +86,25 @@
 ☐ Realizar o commit
     git commit -m "Primeiro commit"
 
+Criar views referentes as paginas do site
+
+    criar arquivos referentes ao site
+
+Criar as rotas de acordo com as view de cada controller
+
+salvar código no git hub
+
+METODO M V C COMPLETO
+
+O CLIENTE SOLICITA-----------INICIA APP.JS----ROTEADOR DE ACORDO COM A PÁGINA SOLICITADA-----CONTROLE ESPECIFICA A FUNÇÃO A SER RENDERIZADA ATRAVES DA VIEWS------ A VIEWS REFERENTE É ABERTA DE ACORDO COM OQUE CODIFICADO NO HTML
+
+
+
+
     //parei aqui ---------------------------------------------------------
+
+
+   <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="https://www.w3schools.com/w3css/tryw3css_templates_travel2.htm#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
+  <a href="https://www.w3schools.com/w3css/tryw3css_templates_travel2.htm#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
+</div>
