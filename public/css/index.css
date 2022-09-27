@@ -1,0 +1,67 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 34px;
+    
+}
+
+.logo-texto {
+    display: flex;
+
+    
+}
+
+.logo-texto p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.ajuda{
+    margin-left: auto;
+}
+
+.idioma{
+    position: relative;
+    top: 10px;
+    right: 150px;
+}
+
+.entrar{
+    position: relative;
+    top: 10px;
+    right: 50px;
+    color: green;
+    font-weight: bold;
+
+
+}
+
+
+.cabecalho{
+    position: relative;
+    color: white;
+}
+
+.cabecalho form{
+    position: absolute;
+    background-color: #ff56227b;
+    width: 100%;
+    padding: 30px;
+    
+       
+}
+
+.texto-abertura{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
