@@ -65,3 +65,54 @@ header{
     font-weight: bold;
     
 }
+
+
+.botao-primario{
+    color: white;
+    background-color: rgba(82, 228, 91, 0.931);
+    border-color:rgba(64, 184, 72, 0.931) ;
+    padding: 3px 10px;
+    border-radius: 8px;
+    
+
+}
+
+.botao-buscar{
+   position: relative;
+   align-items: left;
+
+
+}
+
+
+.botao-primario:hover{
+    background-color: rgba(18, 146, 26, 0.931);
+}
+
+.botao-secundario{
+    color: white;
+    background-color: #ff5722;
+    border-color: #d6481c ;
+    padding: 3px 10px;
+    border-radius: 8px;
+
+}
+
+.link-secundario{
+    color:#ff5722 ;
+
+}
+
+.link-secundario:hover{
+    color: #d6481c;
+}
+
+.ofertas{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+
+}
+
+.ofertas > a > h5 {
+   

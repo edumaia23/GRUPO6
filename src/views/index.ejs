@@ -7,13 +7,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/css/w3.css">
-  <link rel="stylesheet" href="/css/index.css"> 
+  <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
 
 <header>
-  
+
   <div class="logo-texto">
     <img class="logo" src="/img/logo.png" alt="Logo da empresa">
     <div>
@@ -23,9 +23,9 @@
 
   </div>
   <div>
-    <button>Ajuda</button>
-    <button>Português Brasil</button>
-    <button type='submit'>ENTRAR</button>
+    <a class="link-secundario" href="/ajuda">Ajuda</a>
+    <button class="botao-secundario">Português Brasil</button>
+    <button class="botao-primario" type='submit'>ENTRAR</button>
   </div>
 </header>
 
@@ -47,9 +47,9 @@
 
   <header class="cabecalho" style="max-width:1500px">
     <img class="w3-image" src="img/por do sol.png" alt="por do sol" width="1500" height="700">
-    
+
     <h1 class="texto-abertura">Aqui começa sua Jornada</h1>
-    
+
     <form class="deep-orange" action="/busca" method="get">
       <div>
         <label>
@@ -65,31 +65,45 @@
           <span>Várias Cidades</span>
         </label>
       </div>
-      <label for="nome">Origem:</label>
+      <label for="nome">De:</label>
       <input type="text" name="nome" id="origem">
 
-      <label for="nome">Destino:</label>
+      <label for="nome">Para:</label>
       <input type="text" name="nome" id='destino'>
 
-      <button type="submit">ENTRAR</button>
+      <label for="nome">Ida:</label>
+      <input type="text" name="nome" id='Ida'>
+
+      <label for="nome">Volta:</label>
+      <input type="text" name="nome" id='Volta'>
+
+      <label for="nome">Classe:</label>
+      <input type="text" name="nome" id='Classe'>
+
+
+      <button class="botao-primario" type="submit">BUSCAR>></button>
+
 
     </form>
 
   </header>
 
   <!-- Ofertas-->
-  <div class="w3-content" style="max-width:1100px;">
+  <div class="w3-content">
 
-    <div>
+    <div class="ofertas">
       <h2><strong>Melhores voos para o seu Destino</strong></h2>
-      <h4>Melhores tarifas para esse mês>>>>>>></h4>
-      <h5><strong>50%</strong> desconto</h5>
-      <a href="">
+
+      <a class="link-secundario" href="">
         <h5>Veja às ofertas</h5>
       </a>
     </div>
+
+    <h4>Melhores tarifas para esse mês>>>>>>></h4>
+    <h5><strong>50%</strong> desconto</h5>
+    
     <div>
-      <div class="w3-half w3-middle">
+      <div class="w3-half w3-middle  ">
         <img width="30%" src="img/buenos.png" alt="Buenos" style="width:100%">
         <div class="w3-container w3-deep-orange">
           <h3>Buenos Aires</h3>
