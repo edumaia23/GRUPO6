@@ -111,8 +111,20 @@ header{
     display: flex;
     align-content: space-around;
     justify-content: space-between;
+    gap: 10px;
 
 }
 
-.ofertas > a > h5 {
+.footer{
+    background-color: rgba(128, 128, 128, 0.398);
+}
+
+
+.rodape{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
    
+}
+
+
