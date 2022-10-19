@@ -1,0 +1,75 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 34px;
+    
+}
+
+.logo-texto {
+    display: flex;
+
+    
+}
+
+.logo-texto p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.ajuda{
+    margin-left: auto;
+}
+
+.idioma{
+    position: relative;
+    top: 10px;
+    right: 150px;
+}
+
+.entrar{
+    position: relative;
+    top: 10px;
+    right: 50px;
+    color: green;
+    font-weight: bold;
+
+
+}
+
+.botao-primario{
+    color: white;
+    background-color: rgba(82, 228, 91, 0.931);
+    border-color:rgba(64, 184, 72, 0.931) ;
+    padding: 3px 10px;
+    border-radius: 8px;
+    
+}
+
+.botao-primario:hover{
+    background-color: rgba(18, 146, 26, 0.931);
+}
+
+.link-secundario{
+    color:#ff5722 ;
+
+}
+
+.link-secundario:hover{
+    color: #d6481c;
+}
+
+.botao-secundario{
+    color: white;
+    background-color: #ff5722;
+    border-color: #d6481c ;
+    padding: 3px 10px;
+    border-radius: 8px;
+
+}
+

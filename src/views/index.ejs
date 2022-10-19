@@ -2,7 +2,7 @@
 
 <html>
 
-<head>
+  <!-- <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
-</head>
-
-<header>
+</head> -->
+<%-include("parts/head.ejs")  %>
+ 
+<link rel="stylesheet" href="/css/index.css">
+<!-- <header>
 
   <div class="logo-texto">
     <img class="logo" src="/img/logo.png" alt="Logo da empresa">
@@ -31,26 +33,25 @@
 
 <body class="w3-light-grey">
 
-  <!-- Passagens -->
 
-  <div class="w3-bar w3-deep-orange">
+   <div class="w3-bar w3-deep-orange">
     <button class="w3-bar-item w3-button tablink w3-red" onclick="openLink(event, &#39;Passagens aéreas&#39;);"><i
         class="fa fa-plane w3-margin-right"></i>Passagens aéreas</button>
     <button class="w3-bar-item w3-button tablink" onclick="openLink(event, &#39;Hotel/Acomodações&#39;);"><i
         class="fa fa-bed w3-margin-right"></i>Hotel/Acomodações</button>
     <button class="w3-bar-item w3-button tablink" onclick="openLink(event, &#39;Aluguel de Carro&#39;);"><i
         class="fa fa-car w3-margin-right"></i>Aluguel de Carro</button>
-  </div>
-
+  </div> --> -->
+  <%-include("parts/header.ejs")  %>
 
   <!-- Formulario de passagens -->
 
-  <header class="cabecalho" style="max-width:1500px">
-    <img class="w3-image" src="img/por do sol.png" alt="por do sol" width="1500" height="700">
+  <header class="cabecalho">
+    <img class= "cabecalho img" src="img/banner.jfif" alt="por do sol">
 
     <h1 class="texto-abertura">Aqui começa sua Jornada</h1>
 
-    <form class="deep-orange" action="/busca" method="get">
+    <form class="deep-orange" action="/passagens" method="get">
       <div>
         <label>
           <input type="radio" name="tipoDeBusca">
@@ -109,13 +110,13 @@
       <div>
         <img  src="img/buenos.png" alt="Buenos" style="width:100%">
         
-        <div class="w3-container w3-deep-orange">
-          <h3>Buenos Aires</h3>
-          <p>Viagem apartir de R$700</p>
-          <p>Gol quint. 13/09 de set.
+        <div class="destinos-card w3-deep-orange">
+          <h3 class="w3-margin-top-0">Buenos Aires</h3>
+          <p class="w3-margin-top-0">Viagem apartir de R$700</p>
+          <p class="w3-margin-top-0">Gol quint. 13/09 de set.
             Gol seg. 19/09 de set.
           </p>
-          <button class="w3-button w3-margin-bottom">Compre já>>>></button>
+          <button class="w3-button">Compre já>>></button>
         </div>
 
       </div>
@@ -123,13 +124,13 @@
       <div>
         <img  src="img/lisboa.png" alt="Lisboa" style="width:100%">
         
-        <div class="w3-container w3-deep-orange">
-          <h3>Lisboa</h3>
-          <p>Viagem apartir de R$1300</p>
-          <p>Gol quint. 10/09 de set.
+        <div class="destinos-card w3-deep-orange">
+          <h3 class="w3-margin-top-0">Lisboa</h3>
+          <p class="w3-margin-top-0">Viagem apartir de R$1300</p>
+          <p class="w3-margin-top-0">Gol quint. 10/09 de set.
             Gol seg. 23/09 de set.
           </p>
-          <button class="w3-button w3-margin-bottom">Compre já</button>
+          <button class="w3-button">Compre já>>></button>
         </div>
       </div>
        
@@ -137,13 +138,13 @@
       <div>
         <img  src="img/santiago.png" alt="Santiago" style="width:100%">
         
-        <div class="w3-container w3-deep-orange">
-          <h3>Santiago</h3>
-          <p>Viagem apartir de R$1700</p>
-          <p>Gol quint. 03/09 de set.
+        <div class="w3-deep-orange destinos-card">
+          <h3 class="w3-margin-top-0">Santiago</h3>
+          <p class="w3-margin-top-0">Viagem apartir de R$1700</p>
+          <p class="w3-margin-top-0">Gol quint. 03/09 de set.
             Gol seg. 12/09 de set.
           </p>
-          <button class="w3-button w3-margin-top">Compre já</button>
+          <button class="w3-button">Compre já>>></button>
         </div>
         
       </div>
@@ -153,7 +154,7 @@
   </div>  
   
   
-      <!-- Footer -->
+      <!-- Footer
       
 
         <footer class=" footer">
@@ -203,16 +204,16 @@
             <h5>Nossas Rede</h5>
             
             <a href="">
-              <img src="../public/img/facebook.svg" alt="facebook">
+              <img src="/img/facebook.svg" alt="facebook">
             </a>
             <a href="">
-              <img src="../public/img/instagram.svg" alt="instagram">
+              <img src="/img/instagram.svg" alt="instagram">
             </a>
             <a href="">
-              <img src="../public/img/linkedin.svg" alt="linkedin">
+              <img src="/img/linkedin.svg" alt="linkedin">
             </a>
             <a href="">
-              <img src="../public/img/youtube.svg" alt="youtube">
+              <img src="/img/youtube.svg" alt="youtube">
               
             </a>
             
@@ -238,7 +239,9 @@
 
         // Click on the first tablink on load
         document.getElementsByClassName("tablink")[0].click();
-      </script>
+      </script> -->
+
+      <%-include("parts/footer.ejs") %>
 
 
 

@@ -6,7 +6,7 @@ app.set('view engine','ejs') // gerador das páginas é a bilbioteca ejs
 app.set('views', './src/views') // caminho para as views, vão estar nessa pasta
 app.use(express.static('public')) // capturar os arquivos estáticos
 
-const router = require ('./src/routers/viagensRouter'); // cria a variavel router e importa o caminho dos arquivos
+const router = require ('./src/routers/passagensRouter'); // cria a variavel router e importa o caminho dos arquivos
 
 app.use('/', router); // encaminha a requisição para o roteador
 //app.use('/busca', router.busca); // encaminha a req. para a busca

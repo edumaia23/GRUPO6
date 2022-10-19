@@ -1,0 +1,88 @@
+<!-- Footer -->
+      
+<link rel="stylesheet" href="/css/footer.css">
+
+<footer class=" footer">
+
+           
+    <div class = "rodape">
+
+    <div>
+      <h5><strong>Explorar</strong></h5>
+      <ul type='disc'>
+        <li><a href="">Cidades</a></li>
+        <li><a href="">Aeroportos</a></li>
+        <li><a href="">Países</a></li>
+        <li><a href="">Linhas aéreas</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h5><strong>Parceiros</strong></h5>
+      <ul type='disc'>
+        <li>Trabalhe conosco</li>
+        <li>Anuncie conosco</li>
+        <li>Informações de viagens</li>
+      </ul>
+    </div>
+    
+    <div>
+      <h5><strong>Empresas</strong></h5>
+      <ul type='disc'>
+        <li>Sobre nós</li>
+        <li>Nossa equipe</li>
+        <li>Acessibilidade</li>
+        <li>Sustentabilidade</li>
+      </ul>
+    </div>
+    
+    <div>
+      <h5><strong>Ajuda</strong></h5>
+      <ul type='disc'>
+        <li>Ajuda</li>
+        <li>Configurações de privacidade</li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <div class="rodape">       
+    <h5>Nossas Rede</h5>
+    
+    <a href="">
+      <img src="/img/facebook.svg" alt="facebook">
+    </a>
+    <a href="">
+      <img src="/img/instagram.svg" alt="instagram">
+    </a>
+    <a href="">
+      <img src="/img/linkedin.svg" alt="linkedin">
+    </a>
+    <a href="">
+      <img src="/img/youtube.svg" alt="youtube">
+      
+    </a>
+    
+  </div>
+  
+</footer>
+
+<script>
+  // Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+</script>

@@ -1,0 +1,17 @@
+.footer{
+    background-color: rgba(128, 128, 128, 0.398);
+    margin-top: 50px;
+    padding: 16px;
+}
+
+
+
+
+.rodape{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+   
+}
+
+
