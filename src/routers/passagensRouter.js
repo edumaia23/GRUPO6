@@ -8,7 +8,7 @@ const passagensController = require('../controllers/passagensController'); // cr
 router.get('/', passagensController.index); // rota referente a função index q está na pasta buscacontroller
 
 //criar rota para passagens
-router.get('/passagens', passagensController.busca );// rota referente a função busca q está na pasta passagenscontroller
+router.get('/passagens/busca', passagensController.busca );// rota referente a função busca q está na pasta passagenscontroller
 
 
 module.exports = router;// exporta o router para outros arquivos

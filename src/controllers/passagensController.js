@@ -8,7 +8,8 @@ const buscaController = {  // primeiro passo é criar a variavel e depois criar 
 
 
     busca: (req, res) => {
-        res.render('passagens.ejs')
+        // res.render('passagens.ejs')
+        res.send(req.query)
     },
 
 
