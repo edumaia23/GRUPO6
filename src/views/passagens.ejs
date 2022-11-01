@@ -1,8 +1,14 @@
 <html>
-
+  
+  <!-- inclui o head da pagina raiz -->
 <%-include("parts/head.ejs") %>
 
 <%-include("parts/header.ejs") %>
+
+<!-- // inclui o estilo lincando com o css -->
+<link rel="stylesheet" href="/css/passagens.css"> 
+
+
 
 
     <!-- PASSAGENS -->
@@ -12,75 +18,150 @@
       <button type="radio">
          <img src="/img/lupa.png"></button>
         </div> -->
-       
-        </div>
+        
+      </div>
+      
+      <body>
+        <!-- Promoção -->
+        <div class="w3-container">
+          <h2 bold >Preço esse mês</h2>
+          <p>Preço mais baixo estimado encontrados nos últimos 4 dias!</p>
+        
+      <!-- Calendario -->
+      <div id="app">
+        <form>
+          <section class="calendar">
+            <div class="weekday">
+              <p>Dom</p>
+              <div>
+                <input type="radio" id="2022-10-01" name="data" value="2022-10-01" />
+                <label for="2022-10-01">
+                  <p class="day">
+                    <span>1</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="2022-10-08" name="data" value="2022-10-08" />
+                <label for="2022-10-08">
+                  <p class="day">
+                    <span>8</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="weekday">
+              <p>Seg</p>
+              <div>
+                <input type="radio" id="2022-10-02" name="data" value="2022-10-02" />
+                <label for="2022-10-02">
+                  <p class="day">
+                    <span>2</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="2022-10-09" name="data" value="2022-10-09" />
+                <label for="2022-10-09">
+                  <p class="day">
+                    <span>9</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="weekday">
+              <p>Ter</p>
+              <div>
+                <input type="radio" id="2022-10-03" name="data" value="2022-10-03" />
+                <label for="2022-10-03">
+                  <p class="day">
+                    <span>3</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="2022-10-10" name="data" value="2022-10-10" />
+                <label for="2022-10-10">
+                  <p class="day">
+                    <span>10</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="weekday">
+              <p>Qua</p>
+              <div>
+                <input type="radio" id="2022-10-04" name="data" value="2022-10-04" />
+                <label for="2022-10-04">
+                  <p class="day">
+                    <span>4</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="weekday">
+              <p>Qui</p>
+              <div>
+                <input type="radio" id="2022-10-05" name="data" value="2022-10-05" />
+                <label for="2022-10-05">
+                  <p class="day">
+                    <span>5</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="weekday">
+              <p>Sex</p>
+              <div>
+                <input type="radio" id="2022-10-06" name="data" value="2022-10-06" />
+                <label for="2022-10-06">
+                  <p class="day">
+                    <span>6</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="weekday">
+              <p>Sáb</p>
+              <div>
+                <input type="radio" id="2022-10-07" name="data" value="2022-10-07" />
+                <label for="2022-10-07">
+                  <p class="day">
+                    <span>7</span>
+                    <small class="price">R$ 10000,00</small>
+                  </p>
+                </label>
+              </div>
+              <div class="weekday">
+    
+                <div>
+                  <input type="radio" id="2022-11-07" name="data" value="2022-11-07" />
+                  <label for="2022-11-07">
+                    <p class="day">
+                      <span>11</span>
+                      <small class="price">R$ 9000,00</small>
+                    </p>
+                  </label>
+                </div>
+   
+            </div>
+          </section>
+          <button class="btn-submit" type="submit">Escolher</button>
 
-        <body>
-          <div id="app">
-            <section class="calendar">
-              <div class="weekday">
-                <p>Dom</p>
-                <p class="day">
-                  <span>1</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-                <p class="day">
-                  <span>8</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-              </div>
-              <div class="weekday">
-                <p>Seg</p>
-                <p class="day">
-                  <span>2</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-                <p class="day">
-                  <span>9</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-              </div>
-              <div class="weekday">
-                <p>Ter</p>
-                <p class="day">
-                  <span>3</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-                <p class="day">
-                  <span>10</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-              </div>
-              <div class="weekday">
-                <p>Qua</p>
-                <p class="day">
-                  <span>4</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-              </div>
-              <div class="weekday">
-                <p>Qui</p>
-                <p class="day">
-                  <span>5</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-              </div>
-              <div class="weekday">
-                <p>Sex</p>
-                <p class="day">
-                  <span>6</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-              </div>
-              <div class="weekday">
-                <p>Sáb</p>
-                <p class="day">
-                  <span>7</span>
-                  <small class="price">R$ 10000,00</small>
-                </p>
-              </div>
-            </section>
-          </div>
+
+
+        </form>
+      </div>
+      
           
 
         <!-- <h2>Consiga a melhor oferta!</h2>
@@ -90,9 +171,6 @@
         <button type="button" class="w3-button w3-red w3-margin-top">Enviar</button> -->
 
     <!-- Contato -->
-    <div class="w3-container">
-      <h2 bold >Preço esse mês</h2>
-      <p>Preço mais baixo estimado encontrados nos últimos 4 dias!</p>
       
       <!-- <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       <form action="https://www.w3schools.com/action_page.php" target="_blank">
