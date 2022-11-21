@@ -1,0 +1,8 @@
+const {Passagem, sequelize} = require('./models');
+
+Passagem.findByPk(10).then(
+    data => {
+        console.log(data.toJSON());
+        sequelize.close();
+    }
+)
