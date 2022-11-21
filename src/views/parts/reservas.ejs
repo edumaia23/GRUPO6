@@ -1,0 +1,25 @@
+
+
+
+<div>
+    <form method="post" action="/register" enctype ="multipart/form-data">
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="Digite seu nome">
+        <label for="message">Mensagem</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email"> 
+
+        <label for="reserva">Pagamento</label>
+        <select id="reserva" name="pagamento">
+            <option>Cartão de credito</option>
+            <option>Pix</option>
+        </select>
+
+        <label for="date">Data</label>
+        <input type="date" id="date" name="date">
+
+        <label type="texto">Origem</label>
+        <label type="texto">Destino</label>
+
+        <button type="submit">Confirmar</button>
+    </form>
+</div>

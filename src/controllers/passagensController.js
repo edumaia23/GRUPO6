@@ -8,8 +8,10 @@ const passagensController = {  // primeiro passo é criar a variavel e depois cr
 
 
     busca: (req, res) => {
-         res.render('passagens.ejs')
+        const {origem, destino, ida, volta, classe} = req.query
+        res.render('passagens.ejs')
       //  res.send(req.query)
+
     },
 
 
@@ -17,3 +19,4 @@ const passagensController = {  // primeiro passo é criar a variavel e depois cr
 }
 
 module.exports = passagensController; // exporta o arquivo viagens controle
+

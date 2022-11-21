@@ -4,4 +4,4 @@ DELETE FROM companhias WHERE id>=0;
 		(id, nome)
 	VALUES
 		(1, 'azul'),
-        (2, 'TAM')';
+        (2, 'TAM');
