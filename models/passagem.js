@@ -35,19 +35,19 @@ module.exports = (sequelize, DataTypes) => {
         }
     )
     
-    // publicacao.associate = (models)=>{
-    //     publicacao.belongsTo(models.Usuario, {foreignKey:'usuarios_id', as: 'autor'});
-    //     publicacao.belongsToMany(
-    //         models.Usuario,
-    //         {
-    //             as: 'curtidores',
-    //             through: 'curtidas',
-    //             foreignKey: 'publicacoes_id',
-    //             otherKey: 'usuarios_id',
-    //             timestamps: false
-    //         }
-    //     );
-    // }
+    passagem.associate = (models)=>{
+        passagem.belongsTo(models.Voos, {foreignKey:'voos_id', as: 'voo'});
+        // publicacao.belongsToMany(
+        //     models.Usuario,
+        //     {
+        //         as: 'curtidores',
+        //         through: 'curtidas',
+        //         foreignKey: 'publicacoes_id',
+        //         otherKey: 'usuarios_id',
+        //         timestamps: false
+        //     }
+        //);
+    }
 
     return passagem;
 
