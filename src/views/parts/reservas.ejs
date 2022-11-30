@@ -1,6 +1,10 @@
+ <!-- inclui o head da pagina raiz -->
+ <%-include("parts/head.ejs") %>
 
-
-
+ <%-include("parts/header.ejs") %>
+ 
+ <!-- // inclui o estilo lincando com o css -->
+ <link rel="stylesheet" href="/css/passagens.css"> 
 <div>
     <form method="post" action="/register" enctype ="multipart/form-data">
         <label for="name">Nome</label>
@@ -23,3 +27,5 @@
         <button type="submit">Confirmar</button>
     </form>
 </div>
+
+<%-include("parts/footer.ejs") %>

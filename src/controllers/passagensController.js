@@ -8,10 +8,10 @@ const passagensController = {  // primeiro passo é criar a variavel e depois cr
 
 
     busca: async (req, res) => {
-        const {origem, destino, ida, volta, classe} = req.query
-        const passagens = await Passagem.findAll()
-        //res.render('passagens.ejs')
-        res.send(passagens)
+       //const {origem, destino, ida, volta, classe} = req.query
+        //const passagens = await Passagem.findAll()
+        res.render('passagens.ejs')
+      // res.send(passagens)
 
     },
 
