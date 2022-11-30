@@ -1,5 +1,5 @@
 // o controller receberá a solicitação do roteador e encaminhará a requisição para a função determinada, rederizando a view correspondente
-
+const {Voos,Passagem, sequelize} = require('../../models');
 const passagensController = {  // primeiro passo é criar a variavel e depois criar a função de acordo com cada página do site
 
     index: (req, res) => {
@@ -7,10 +7,11 @@ const passagensController = {  // primeiro passo é criar a variavel e depois cr
     },
 
 
-    busca: (req, res) => {
+    busca: async (req, res) => {
         const {origem, destino, ida, volta, classe} = req.query
-        res.render('passagens.ejs')
-      //  res.send(req.query)
+        const passagens = await Passagem.findAll()
+        //res.render('passagens.ejs')
+        res.send(passagens)
 
     },
 
