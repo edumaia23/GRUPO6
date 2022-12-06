@@ -2,19 +2,19 @@
 
 const reservasController = {  // primeiro passo é criar a variavel e depois criar a função de acordo com cada página do site
 
-   index: (req, res) => {
-        res.render('index.ejs')    
-   },
+    index: (req, res) => {
+        res.render('index.ejs')
+    },
 
 
     busca: (req, res) => {
-      
-    res.render('busca.ejs')
-       
+
+        res.render('busca.ejs')
+
 
     },
 
-    reservas: (req,res) => {
+    reservas: (req, res) => {
         res.render('reservas.ejs')
     }
 
