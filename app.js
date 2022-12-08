@@ -7,9 +7,12 @@ app.set('views', './src/views') // caminho para as views, vão estar nessa pasta
 app.use(express.static('public')) // capturar os arquivos estáticos
 
 const router = require ('./src/routers/passagensRouter'); // cria a variavel router e importa o caminho dos arquivos
+const usuariosRouter = require('./src/routers/usuariosRouter');
 
 app.use('/', router); // encaminha a requisição para o roteador
-//app.use('/busca', router.busca); // encaminha a req. para a busca
+app.use('/usuarios',usuariosRouter);
+
+//app.use('/busca',"/src/views/reservas.ejs" ); // encaminha a req. para a busca
 
 app.listen(3000, ()=>{
     console.log("servidor rodando"); // incia o andamento do servidor

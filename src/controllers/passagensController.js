@@ -16,7 +16,9 @@ const passagensController = {  // primeiro passo é criar a variavel e depois cr
        console.log(resultado);
 
         res.render('passagens.ejs', {resultado})
-      //res.send(passagens)
+      
+        
+        //res.send(passagens)
 
     },
 

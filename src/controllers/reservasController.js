@@ -9,7 +9,7 @@ const reservasController = {  // primeiro passo é criar a variavel e depois cri
 
     busca: (req, res) => {
 
-        res.render('busca.ejs')
+        res.render('reservas.ejs')
 
 
     },
