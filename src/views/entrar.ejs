@@ -3,29 +3,57 @@
 
  <%-include("parts/header.ejs") %>
  
- <!-- // inclui o estilo lincando com o css -->
- <link rel="stylesheet" href="/css/passagens.css"> 
-<div>
-    <form method="post" action="/register" enctype ="multipart/form-data">
-        <label for="name">Nome</label>
-        <input type="text" id="name" placeholder="Digite seu nome">
-        <label for="message">Mensagem</label>
-        <input type="email" id="email" name="email" placeholder="Digite seu email"> 
-
-        <label for="reserva">Pagamento</label>
-        <select id="reserva" name="pagamento">
-            <option>Cartão de credito</option>
-            <option>Pix</option>
-        </select>
-
-        <label for="date">Data</label>
-        <input type="date" id="date" name="date">
-
-        <label type="texto">Origem</label>
-        <label type="texto">Destino</label>
-
-        <button type="submit">Confirmar</button>
-    </form>
-</div>
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>2DoList</title>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="/css/passagens.css">
+ </head>
+ <body>
+     <main>
+         <form id="form-registrar">
+             <h1><b>Registre-se</b></h1>
+             <label>
+                 <span><b>Nome</b></span>
+                 <input type="text" id="regNome" name="nome" autocomplete="off">
+             </label>
+             <label>
+                 <span>E:mail</span>
+                 <input type="text" id="regEmail" name="email" autocomplete="off">
+             </label>
+             <label>
+                 <span>Senha</span>
+                 <input type="text" id="regSenha" name="senha" autocomplete="off">
+             </label>
+             <label>
+                 <span>Confirme Senha</span>
+                 <input type="text" id="regConf" name="confirmacao" autocomplete="off">
+             </label>
+             <div class="controles">
+                 <button class= "botao-primario" id="btRegistrar">Registrar</button>
+             </div>
+         </form>
+         <form id="form-login">
+             <h1><b>Faça o Login!</b></h1>
+             <label>
+                 <span>E:mail</span>
+                 <input type="text" id="email" name="email" autocomplete="off">
+             </label>
+             <label>
+                 <span>Senha</span>
+                </form>
+                 <input type="text" id="senha" name="senha" autocomplete="off">
+             </label>
+             <div class="controles">
+                 <button class="botao-primario" id="btRegistrar">Entrar</button>
+             </div>
+     </main>
+     <script src="entrar.js"></script>
+ </body>
+ </html>
 
 <%-include("parts/footer.ejs") %>
