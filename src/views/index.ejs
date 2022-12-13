@@ -67,10 +67,21 @@
         </label>
       </div>
       <label for="nome">De:</label>
-      <input type="text" name="origem" id="origem">
+    
+      <select name="origem" id="origem">
+        <% for(const a of aeroportos){ %>
+          <option value="<%=a.id%>" ><%= a.cidade %><%= a.sigla %></option>
+        <% } %> 
+        
+      </select>
 
       <label for="nome">Para:</label>
-      <input type="text" name="destino" id='destino'>
+      <select name="destino" id="destino">
+        <% for(const a of aeroportos){ %>
+          <option value="<%=a.id%>" ><%= a.cidade %><%= a.sigla %></option>
+        <% } %> 
+        
+      </select>
 
       <label for="nome">Ida:</label>
       <input type="date" name="ida" id='Ida'>
