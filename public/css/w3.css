@@ -111,10 +111,6 @@ figure {
     margin: 1em 40px
 }
 
-img {
-    
-    border-radius:50%; 
-}
 
 code,
 kbd,
@@ -295,9 +291,7 @@ hr {
     height: auto
 }
 
-img {
-    border-radius: 50%;
-}
+
 
 a {
     color: inherit

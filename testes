@@ -1,0 +1,18 @@
+const {Voos,Passagem, sequelize} = require('./models');
+
+Passagem.findByPk(10, {include:"voo"}).then(
+    data => {
+        console.log(data.toJSON());
+        sequelize.close();
+    }
+)
+
+
+Voos.findByPk(6).then(
+    data => {
+        console.log(data.toJSON());
+        sequelize.close();
+    }
+);
+
+

@@ -1,4 +1,4 @@
-	DELETE FROM aeroportos WHERE id>=0;
+DELETE FROM aeroportos WHERE id>=0;
     
   INSERT INTO aeroportos
 		(id, cidade, sigla, nome)
