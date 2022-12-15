@@ -14,10 +14,15 @@
       <div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card w3-hover-opacity-off">
       <button type="radio">
          <img src="/img/lupa.png"></button>
-         <%=resultado[0]?.preco %> 
-         <%=resultado[0]?.data_hora_partida %>
-         <%=resultado[0]?.cidade %>
-         <%=resultado[0]?.sigla %>
+         <br charset=UTF-8>
+         R$ - <%=resultado[0]?.preco %> 
+         <br>
+         DATA - <%=resultado[0]?.data_hora_partida %>
+         <br>
+         ORIGEM - <%=resultado[0]?.aeroOrigemCidade %> 
+         <br>
+         DESTINO - <%=resultado[0]?.aeroDestinoCidade %>
+      
       </div>
       
       <body>

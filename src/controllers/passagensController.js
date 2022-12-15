@@ -16,8 +16,27 @@ const passagensController = {  // primeiro passo é criar a variavel e depois cr
 
   busca: async (req, res) => {
     const { origem, destino, ida, volta, classe } = req.query
-    var sql = `select passagens.id, passagens.preco, voos_id, data_hora_partida, data_hora_chegada  FROM PASSAGENS inner JOIN VOOS ON PASSAGENS.VOOS_ID = VOOS.ID
-       WHERE AEROPORTOS_ORIGEM_ID = ${origem} AND AEROPORTOS_DESTINO_ID = ${destino} AND date(data_hora_partida) = "${ida}";`;
+    console.log(ida);
+
+    var sql = `SELECT passagens.id,
+       passagens.preco,
+       voos_id,
+       data_hora_partida,
+       data_hora_chegada,
+       AO.nome   AS aeroOrigemNome,
+       AD.nome   AS aeroDestinoNome,
+       AO.cidade AS aeroOrigemCidade,
+       AD.cidade AS aeroDestinoCidade
+FROM   passagens
+       INNER JOIN voos
+               ON passagens.voos_id = voos.id
+       INNER JOIN aeroportos AO
+               ON AO.id = voos.aeroportos_origem_id
+       INNER JOIN aeroportos AD
+               ON AD.id = voos.aeroportos_destino_id
+WHERE  aeroportos_origem_id = ${origem}
+       AND aeroportos_destino_id = ${destino}
+       AND Date(data_hora_partida) = "${ida}"; `;
     let resultado = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
     console.log(resultado);
 
