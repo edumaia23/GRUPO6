@@ -2,263 +2,139 @@
 
 <html>
 
-  <!-- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <%-include("parts/head.ejs") %>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/w3.css">
-  <link rel="stylesheet" href="/css/index.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-
-</head> -->
-<%-include("parts/head.ejs")  %>
- 
-<link rel="stylesheet" href="/css/index.css">
-<!-- <header>
-
-  <div class="logo-texto">
-    <img class="logo" src="/img/logo.png" alt="Logo da empresa">
-    <div>
-      <p>Pé Na</p>
-      <p>Estrada</p>
-    </div>
-
-  </div>
-  <div>
-    <a class="link-secundario" href="/ajuda">Ajuda</a>
-    <button class="botao-secundario">Português Brasil</button>
-    <button class="botao-primario" type='submit'>ENTRAR</button>
-  </div>
-</header>
-
-<body class="w3-light-grey">
-
-
-   <div class="w3-bar w3-deep-orange">
-    <button class="w3-bar-item w3-button tablink w3-red" onclick="openLink(event, &#39;Passagens aéreas&#39;);"><i
-        class="fa fa-plane w3-margin-right"></i>Passagens aéreas</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, &#39;Hotel/Acomodações&#39;);"><i
-        class="fa fa-bed w3-margin-right"></i>Hotel/Acomodações</button>
-    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, &#39;Aluguel de Carro&#39;);"><i
-        class="fa fa-car w3-margin-right"></i>Aluguel de Carro</button>
-  </div> --> -->
-  <%-include("parts/header.ejs")  %>
-
-  <!-- Formulario de passagens -->
-
-  <header class="cabecalho">
-    <img class= "cabecalho img" src="img/banner.jfif" alt="por do sol">
-
-    <h1 class="texto-abertura">Aqui começa sua Jornada</h1>
-
-    <form class="deep-orange" action="/passagens/busca" method="get">
-      <div>
-        <label>
-          <input type="radio" name="tipoDeBusca">
-          <span>Ida Volta</span>
-        </label>
-        <label>
-          <input type="radio" name="tipoDeBusca">
-          <span>Somente Ida</span>
-        </label>
-        <label>
-          <input type="radio" name="tipoDeBusca">
-          <span>Várias Cidades</span>
-        </label>
-      </div>
-      <label for="nome">De:</label>
-    
-      <select name="origem" id="origem">
-        <% for(const a of aeroportos){ %>
-          <option value="<%=a.id%>" ><%= a.cidade %><%= a.sigla %></option>
-        <% } %> 
-        
-      </select>
-
-      <label for="nome">Para:</label>
-      <select name="destino" id="destino">
-        <% for(const a of aeroportos){ %>
-          <option value="<%=a.id%>" ><%= a.cidade %><%= a.sigla %></option>
-        <% } %> 
-        
-      </select>
-
-      <label for="nome">Ida:</label>
-      <input type="date" name="ida" id='Ida'>
-
-      <label for="nome">Volta:</label>
-      <input type="date" name="volta" id='Volta'>
-
-      <label for="nome">Classe:</label>
-      <select name="classe" id="classe">
-        <option selected value="1">Economica</option>
-        <option value="2">Executiva</option>
-      </select>
-
-
-      <button class="botao-primario" type="submit">BUSCAR>></button>
-
-
-    </form>
-
-  </header>
-
-  <!-- Ofertas-->
-  <div class="w3-content">
-
-    <div class="ofertas">
-      <h2><strong>Melhores voos para o seu Destino</strong></h2>
-
-      <a class="link-secundario" href="">
-        <h5>Veja às ofertas</h5>
-      </a>
-    </div>
-
-    <h4>Melhores tarifas para esse mês>>>>>>></h4>
-    <h5><strong>50%</strong> desconto</h5>
-    
+  <body>
   
-    <div class= "ofertas" >
-     
+    <link rel="stylesheet" href="/css/index.css">
 
-      <div>
-        <img  src="img/buenos.png" alt="Buenos" style="width:100%">
-        
-        <div class="destinos-card w3-deep-orange">
-          <h3 class="w3-margin-top-0">Buenos Aires</h3>
-          <p class="w3-margin-top-0">Viagem apartir de R$700</p>
-          <p class="w3-margin-top-0">Gol quint. 13/09 de set.
-            Gol seg. 19/09 de set.
-          </p>
-          <button class="w3-button">Compre já>>></button>
-        </div>
+    <%-include("parts/header.ejs")  %>
+    <%-include("parts/subheader.ejs")  %>
 
-      </div>
-       
-      <div>
-        <img  src="img/lisboa.png" alt="Lisboa" style="width:100%">
-        
-        <div class="destinos-card w3-deep-orange">
-          <h3 class="w3-margin-top-0">Lisboa</h3>
-          <p class="w3-margin-top-0">Viagem apartir de R$1300</p>
-          <p class="w3-margin-top-0">Gol quint. 10/09 de set.
-            Gol seg. 23/09 de set.
-          </p>
-          <button class="w3-button">Compre já>>></button>
-        </div>
-      </div>
-       
-       
-      <div>
-        <img  src="img/santiago.png" alt="Santiago" style="width:100%">
-        
-        <div class="w3-deep-orange destinos-card">
-          <h3 class="w3-margin-top-0">Santiago</h3>
-          <p class="w3-margin-top-0">Viagem apartir de R$1700</p>
-          <p class="w3-margin-top-0">Gol quint. 03/09 de set.
-            Gol seg. 12/09 de set.
-          </p>
-          <button class="w3-button">Compre já>>></button>
-        </div>
-        
-      </div>
+    <!-- Formulario de passagens -->
+    <header class="cabecalho">
+      <img class= "cabecalho img" src="img/banner.jfif" alt="por do sol">
 
+      <h1 class="texto-abertura">Aqui começa sua Jornada</h1>
+
+      <form class="deep-orange" action="/passagens/busca" method="get">
+        <div>
+          <label>
+            <input type="radio" name="tipoDeBusca">
+            <span>Ida Volta</span>
+          </label>
+          <label>
+            <input type="radio" name="tipoDeBusca">
+            <span>Somente Ida</span>
+          </label>
+          <label>
+            <input type="radio" name="tipoDeBusca">
+            <span>Várias Cidades</span>
+          </label>
+        </div>
+        <label for="nome">De:</label>
       
-    </div>  
-  </div>  
-  
-  
-      <!-- Footer
+        <select name="origem" id="origem">
+          <% for(const a of aeroportos){ %>
+            <option value="<%=a.id%>" ><%= a.cidade %><%= a.sigla %></option>
+          <% } %> 
+          
+        </select>
+
+        <label for="nome">Para:</label>
+        <select name="destino" id="destino">
+          <% for(const a of aeroportos){ %>
+            <option value="<%=a.id%>" ><%= a.cidade %><%= a.sigla %></option>
+          <% } %> 
+          
+        </select>
+
+        <label for="nome">Ida:</label>
+        <input type="date" name="ida" id='Ida'>
+
+        <label for="nome">Volta:</label>
+        <input type="date" name="volta" id='Volta'>
+
+        <label for="nome">Classe:</label>
+        <select name="classe" id="classe">
+          <option selected value="1">Economica</option>
+          <option value="2">Executiva</option>
+        </select>
+
+
+        <button class="botao-primario" type="submit">BUSCAR>></button>
+
+
+      </form>
+
+    </header>
+
+    <!-- Ofertas-->
+    <div class="w3-content">
+
+      <div class="ofertas">
+        <h2><strong>Melhores voos para o seu Destino</strong></h2>
+
+        <a class="link-secundario" href="">
+          <h5>Veja às ofertas</h5>
+        </a>
+      </div>
+
+      <h4>Melhores tarifas para esse mês>>>>>>></h4>
+      <h5><strong>50%</strong> desconto</h5>
+      
+    
+      <div class= "ofertas" >
       
 
-        <footer class=" footer">
-           
-            <div class = "rodape">
-
-            <div>
-              <h5><strong>Explorar</strong></h5>
-              <ul type='disc'>
-                <li><a href="">Cidades</a></li>
-                <li><a href="">Aeroportos</a></li>
-                <li><a href="">Países</a></li>
-                <li><a href="">Linhas aéreas</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h5><strong>Parceiros</strong></h5>
-              <ul type='disc'>
-                <li>Trabalhe conosco</li>
-                <li>Anuncie conosco</li>
-                <li>Informações de viagens</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h5><strong>Empresas</strong></h5>
-              <ul type='disc'>
-                <li>Sobre nós</li>
-                <li>Nossa equipe</li>
-                <li>Acessibilidade</li>
-                <li>Sustentabilidade</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h5><strong>Ajuda</strong></h5>
-              <ul type='disc'>
-                <li>Ajuda</li>
-                <li>Configurações de privacidade</li>
-              </ul>
-            </div>
-            
+        <div>
+          <img  src="img/buenos.png" alt="Buenos" style="width:100%">
+          
+          <div class="destinos-card w3-deep-orange">
+            <h3 class="w3-margin-top-0">Buenos Aires</h3>
+            <p class="w3-margin-top-0">Viagem apartir de R$700</p>
+            <p class="w3-margin-top-0">Gol quint. 13/09 de set.
+              Gol seg. 19/09 de set.
+            </p>
+            <button class="w3-button">Compre já>>></button>
           </div>
-     
-          <div class="rodape">       
-            <h5>Nossas Rede</h5>
-            
-            <a href="">
-              <img src="/img/facebook.svg" alt="facebook">
-            </a>
-            <a href="">
-              <img src="/img/instagram.svg" alt="instagram">
-            </a>
-            <a href="">
-              <img src="/img/linkedin.svg" alt="linkedin">
-            </a>
-            <a href="">
-              <img src="/img/youtube.svg" alt="youtube">
-              
-            </a>
-            
+
+        </div>
+        
+        <div>
+          <img  src="img/lisboa.png" alt="Lisboa" style="width:100%">
+          
+          <div class="destinos-card w3-deep-orange">
+            <h3 class="w3-margin-top-0">Lisboa</h3>
+            <p class="w3-margin-top-0">Viagem apartir de R$1300</p>
+            <p class="w3-margin-top-0">Gol quint. 10/09 de set.
+              Gol seg. 23/09 de set.
+            </p>
+            <button class="w3-button">Compre já>>></button>
+          </div>
+        </div>
+        
+        
+        <div>
+          <img  src="img/santiago.png" alt="Santiago" style="width:100%">
+          
+          <div class="w3-deep-orange destinos-card">
+            <h3 class="w3-margin-top-0">Santiago</h3>
+            <p class="w3-margin-top-0">Viagem apartir de R$1700</p>
+            <p class="w3-margin-top-0">Gol quint. 03/09 de set.
+              Gol seg. 12/09 de set.
+            </p>
+            <button class="w3-button">Compre já>>></button>
           </div>
           
-        </footer>
+        </div>
+
         
-        <script>
-          // Tabs
-        function openLink(evt, linkName) {
-          var i, x, tablinks;
-          x = document.getElementsByClassName("myLink");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablink");
-          for (i = 0; i < x.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-          }
-          document.getElementById(linkName).style.display = "block";
-          evt.currentTarget.className += " w3-red";
-        }
+      </div>  
+    </div>
 
-        // Click on the first tablink on load
-        document.getElementsByClassName("tablink")[0].click();
-      </script> -->
+    <%-include("parts/footer.ejs") %>
 
-      <%-include("parts/footer.ejs") %>
-
-
-
-</body>
+  </body>
 
 </html>
