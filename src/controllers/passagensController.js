@@ -21,6 +21,7 @@ const passagensController = {
 
     var sql = `SELECT passagens.id,
        passagens.preco,
+       passagens.assento,
        voos_id,
        data_hora_partida,
        data_hora_chegada,
