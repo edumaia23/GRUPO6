@@ -15,7 +15,7 @@
  </head>
  <body>
      <main>
-         <form id="form-registrar">
+         <form method="post" action="/usuarios/registrar" id="form-registrar">
              <h1><b>Registre-se</b></h1>
              <label>
                  <span><b>Nome</b></span>
@@ -34,7 +34,7 @@
                  <input type="text" id="regConf" name="confirmacao" autocomplete="off">
              </label>
              <div class="controles">
-                 <button class= "botao-primario" id="btRegistrar">Registrar</button>
+                 <button type="submit" class= "botao-primario" id="btRegistrar">Registrar</button>
              </div>
          </form>
          <form id="form-login">

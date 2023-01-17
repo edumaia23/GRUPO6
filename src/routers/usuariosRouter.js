@@ -8,5 +8,6 @@ const usuariosController = require('../controllers/usuariosController'); // cria
 usuariosRouter.get('/entrar', usuariosController.show); // rota referente a função index q está na pasta buscacontroller
 usuariosRouter.post('/login', usuariosController.login);
 usuariosRouter.post('/store', usuariosController.store);
+usuariosRouter.post('/registrar', usuariosController.registrar);
 
 module.exports = usuariosRouter;// exporta o router para outros arquivos

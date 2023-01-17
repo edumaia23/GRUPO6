@@ -14,38 +14,38 @@ const usuariosController = {  // primeiro passo é criar a variavel e depois cri
         res.render('entrar.ejs')
     },
 
+    registrar: (req , res) =>{
 
-    login: (req, res) => {
-
-        registrar: (req , res) =>{
-            const {nome, email, senha, confirme } = req.body;
+        const { email, senha, nome } = req.body
 
             // Verificar se existe um usuario com este email
-        let usuarioExiste = fs.existsSync(__dirname + `/../database/${email}-tarefas.json`);
-        if(usuarioExiste){
-            return res.status(409).json({erro:"Usuário já cadastrado"});
-        }
-        // Confirmar se senha foi preenchida
-        if(senha == ''){
-            return res.status(422).json({erro:"Senha não foi preenchida"});
-        }
-        let novoId = usuarios.length == 0 ? 1 : usuarios[usuarios.length -1 ].id + 1; 
-
-        let usuario = {
-            id: novoId,
-            nome,
-            email,
-            senha
-        }
-        usuario.push(usuario)
-        save();
-
-        }
-
-        res.send('Login realizado')
-
-
+            let usuarioExiste = fs.existsSync(__dirname + `/../database/${email}-tarefas.json`);
+            if(usuarioExiste){
+                return res.status(409).json({erro:"Usuário já cadastrado"});
+            }
+            // Confirmar se senha foi preenchida
+            if(senha == ''){
+                return res.status(422).json({erro:"Senha não foi preenchida"});
+            }
+            let novoId = usuarios.length == 0 ? 1 : usuarios[usuarios.length -1 ].id + 1; 
+    
+            let usuario = {
+                id: novoId,
+                nome,
+                email,
+                senha
+            }
+            usuarios.push(usuario)
+            console.log(usuarios);
+            save();
+    
+    
+    
+            res.send('Login realizado')
+    
     },
+
+    login: (req, res) => {},
 
     store: (req, res) => {
         res.send('Cadastro realizado')

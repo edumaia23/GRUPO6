@@ -98,6 +98,12 @@ METODO M V C COMPLETO
 
 O CLIENTE SOLICITA-----------INICIA APP.JS----ROTEADOR DE ACORDO COM A PÁGINA SOLICITADA-----CONTROLE ESPECIFICA A FUNÇÃO A SER RENDERIZADA ATRAVES DA VIEWS------ A VIEWS REFERENTE É ABERTA DE ACORDO COM OQUE CODIFICADO NO HTML
 
+//passos
+
+Fazer o ciclo MVC do castro....
+1 - Fazer o form de cadastro ser enviado para a rota /usuários/store 
+2 - Fazer com que o usuariosController.store salve um novo usuário no banco de dados
+
 
 
 
@@ -108,3 +114,9 @@ O CLIENTE SOLICITA-----------INICIA APP.JS----ROTEADOR DE ACORDO COM A PÁGINA S
   <a href="https://www.w3schools.com/w3css/tryw3css_templates_travel2.htm#" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-map-marker w3-margin-right"></i>Logo</b></a>
   <a href="https://www.w3schools.com/w3css/tryw3css_templates_travel2.htm#" class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey"><i class="fa fa-search"></i></a>
 </div>
+
+<select>
+   <option>Rio Janeiro</option>
+   <option>São Paulo</option>
+</select>
+SELECT id, nome FROM aeroportos
