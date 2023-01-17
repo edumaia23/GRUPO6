@@ -7,4 +7,5 @@ DELETE FROM aeroportos WHERE id>=0;
         (2, 'Belo Horizonte', 'CNF', 'Confins'),
         (3, 'Rio de Janeiro', 'GIG', 'Galeão'),
         (4, 'Guarulhos', 'GRU', 'Cumbica'),
-        (5, 'São Paulo', 'CNH', 'Congonhas');
+        (5, 'São Paulo', 'CNH', 'Congonhas'),
+        (6, 'Campinas', 'VCP', 'Vira Copos');
