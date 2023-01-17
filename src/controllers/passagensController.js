@@ -1,8 +1,9 @@
-// o controller receberá a solicitação do roteador e encaminhará a requisição para a função determinada, rederizando a view correspondente
+// o controller receberá a solicitação do roteador 
+//e encaminhará a requisição para a função determinada, rederizando a view correspondente
 
 const { Voos, Passagem, sequelize } = require('../../models');
-const passagensController = {  // primeiro passo é criar a variavel e depois criar a função de acordo com cada página do site
-
+const passagensController = {  
+  // primeiro passo é criar a variavel e depois criar a função de acordo com cada página do site
   //escrever a consulta q busca os aeroportos
   //executar a consulta
   //enviar o resultado junto com view
