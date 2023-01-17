@@ -28,7 +28,8 @@ const passagensController = {
        AO.nome   AS aeroOrigemNome,
        AD.nome   AS aeroDestinoNome,
        AO.cidade AS aeroOrigemCidade,
-       AD.cidade AS aeroDestinoCidade
+       AD.cidade AS aeroDestinoCidade,
+       c.nome AS nomeCompanhia
 FROM   passagens
        INNER JOIN voos
                ON passagens.voos_id = voos.id
@@ -36,6 +37,8 @@ FROM   passagens
                ON AO.id = voos.aeroportos_origem_id
        INNER JOIN aeroportos AD
                ON AD.id = voos.aeroportos_destino_id
+       INNER JOIN companhias c
+               ON c.id=voos.companhias_id
 WHERE  aeroportos_origem_id = ${origem}
        AND aeroportos_destino_id = ${destino}
        AND Date(data_hora_partida) = "${ida}"; `;

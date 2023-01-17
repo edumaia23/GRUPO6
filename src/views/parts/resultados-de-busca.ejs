@@ -1,0 +1,22 @@
+<section id="resultados-de-busca">
+    <link rel="stylesheet" href="/css/resultados-de-busca.css">
+    <% for(let passagem of resultado) { %>
+        <article class="passagem">
+        <h2>R$ <%= passagem.preco %></h2>
+        <h3><%= passagem.nomeCompanhia %></h3>
+        <h4>Assento: <%= passagem.assento %></h4>
+        <div class="partida">
+            <span>Partida: <%= passagem.data_hora_partida %> (Horário de Brasília)</span>
+            <p><%= passagem.aeroOrigemCidade %> - <%= passagem.aeroOrigemNome %></p>
+        </div>
+        <div class="partida">
+            <span>Chegada: <%= passagem.data_hora_chegada %> (Horário de Brasília)</span>
+            <p><%= passagem.aeroDestinoCidade %> - <%= passagem.aeroDestinoNome %></p>
+        </div>
+        <form action="" method="post">
+            <input type="hidden" name="idPassagem" value="<%= passagem.id %>">
+            <button type="submit">Adicionar ao Carrinho</button>
+        </form>
+        </article>
+    <% } %>
+</section>
