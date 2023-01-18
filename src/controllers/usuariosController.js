@@ -41,14 +41,14 @@ const usuariosController = {  // primeiro passo é criar a variavel e depois cri
     
     
     
-            res.send('Login realizado')
+            res.send('Cadastro realizado')
     
     },
 
     login: (req, res) => {},
 
     store: (req, res) => {
-        res.send('Cadastro realizado')
+        res.send('Login realizado')
     }
 
 
